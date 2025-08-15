@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haunted Hats' Customer Satisfaction Survey</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+    }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      padding: 0.6rem;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #003366;
+    }
+    .choices {
+      margin-top: 0.5rem;
+    }
+    .choice {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: normal;
+    }
+    .choice input {
+      width: auto;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Haunted Hats' Customer Satisfaction Survey</h1>
+    <p id="description">Your feedback is very important to us. We appreciate you taking a few minutes to complete this survey.</p>
+
+    <form id="survey-form">
+      <label id="name-label" for="name">Full Name</label>
+      <input id="name" type="text" name="name" required placeholder="e.g., John Smith" />
+
+      <label id="email-label" for="email">Email Address</label>
+      <input id="email" type="email" name="email" required placeholder="e.g., email@example.com" />
+
+      <label id="number-label" for="number">Age</label>
+      <input id="number" type="number" name="age" min="18" max="120" placeholder="e.g., 35" />
+
+      <label for="dropdown">Overall Experience</label>
+      <select id="dropdown" name="experience">
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+
+      <label>Would you recommend the game to others?</label>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="recommend" value="yes" /> Yes</label>
+        <label class="choice"><input type="radio" name="recommend" value="no" /> No</label>
+      </div>
+
+      <label>Which areas do you think we should improve? (Select all that apply)</label>
+      <div class="choices">
+        <label class="choice"><input type="checkbox" name="improve" value="cdesign" /> Card design</label>
+        <label class="choice"><input type="checkbox" name="improve" value="rules" /> Rules</label>
+        <label class="choice"><input type="checkbox" name="improve" value="gameplay" /> Gameplay</label>
+        <label class="choice"><input type="checkbox" name="improve" value="pack" /> Packaging</label>
+      </div>
+
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Write your comments here..."></textarea>
+
+      <button id="submit" type="submit">Submit Survey</button>
+    </form>
+  </div>
+</body>
+</html>
